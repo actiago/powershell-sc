@@ -41,6 +41,6 @@ ForEach ($user in $Users) {
 
 "@
 
-  Set-MailboxAutoreplyConfiguration -Identity $user.Origem -AutoReplyState Enabled -ExternalMessage $EmailBody
+  Set-MailboxAutoreplyConfiguration -Identity $user.Origem -AutoReplyState Enabled -InternalMessage $EmailBody -ExternalMessage $EmailBody
 }
 
