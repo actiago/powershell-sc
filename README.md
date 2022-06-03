@@ -35,3 +35,14 @@ Connect-MsolService
 Get-DistributionGroup -Identity "*@mydomain.com" -ResultSize Unlimited | Format-Table
 ```
 
+Informações de IP e interface
+
+```PowerShell
+Get-NetIpAddress | Select-Object InterfaceAlias,IPAddress,AddressFamily | Format-Table
+```
+
+Obtém seu IP público
+
+```PowerShell
+nslokup myip.opendns.com resolver1.opendns.com
+```
